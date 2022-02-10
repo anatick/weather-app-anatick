@@ -47,22 +47,20 @@
 
     <form>
       </br>
+      <h1 id="city">Faro</h1>
+      <ul> <li id="date"></li>
+      </ul>
+      </br>
       <div class="row">
-        <div class="col">
+        <div class="col-6">
           <div class="current-weather">
+            <h2>
+              <span class="temperature" id="temperature">19</span><span class="units">°C</span>
+            </h2>
             <img src="images/mostly-sunny.png" class="main-logo">
-            <h3 id="city">Faro</h3>
-            <li id="date"></li>
-          </div>
           </div>
         </div>
-        <div class="col">
-          <br />
-          <br />
-          <h1>
-            <span class="temperature" id="temperature">19</span><span class="units">°C</span>
-          </h1>
-          <p> 
+        <div class="col-6">
           <ul>
             <li>Humidity: 
               <span id="humidity"></span>%</li>
@@ -72,13 +70,14 @@
               <span id="description"></span></li>
           </ul>
         </div>
+      </div>
     </form>
  
     </br>
    
     <form class="days-form">
       <div class="row">
-        <div class="col-2">
+        <div class="col">
           <div class="card">
             <img src="images/mostly-cloudy.png" class="card-img-top">
             <div class="card-body">
@@ -89,46 +88,47 @@
           </div>
         </div>
  
-      <div class="col-2">
-        <div class="card days" >
-          <img src="images/mostly-sunny.png" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">19 Oct 21</h5>
-            <p class="max-day2">28°<p>    
-            <p class="min-day2">18°</p>        
+        <div class="col">
+          <div class="card days" >
+            <img src="images/mostly-sunny.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">19 Oct 21</h5>
+              <p class="max-day2">28°<p>    
+              <p class="min-day2">18°</p>        
+            </div>
           </div>
         </div>
-      </div>
  
-      <div class="col-2">
-       <div class="card days" >
-          <img src="images/party-cloudy.png" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">20 Oct 21</h5>
-            <p class="max-day3">28°</p> 
-            <p class="min-day3">17°</p>          
+        <div class="col">
+          <div class="card days" >
+            <img src="images/party-cloudy.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">20 Oct 21</h5>
+              <p class="max-day3">28°</p> 
+              <p class="min-day3">17°</p>          
+            </div>
           </div>
         </div>
-      </div>
  
-      <div class="col-2">
-        <div class="card days">
-          <img src="images/mostly-cloudy.png" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">21 Oct 21</h5>
-            <p class="max-day4">24°<p>     
-            <p class="min-day4">15°</p>       
+        <div class="col">
+          <div class="card days">
+            <img src="images/mostly-cloudy.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">21 Oct 21</h5>
+              <p class="max-day4">24°<p>     
+              <p class="min-day4">15°</p>       
+            </div>
           </div>
         </div>
-      </div>
- 
-      <div class="col-2">
-        <div class="card days">
-          <img src="images/mostly-sunny.png" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">22 Oct 21</h5>
-            <p class="max-day5">24°<p>    
-            <p class="min-day5">13°</p>        
+  
+        <div class="col">
+          <div class="card days">
+            <img src="images/mostly-sunny.png" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">22 Oct 21</h5>
+              <p class="max-day5">24°<p>    
+              <p class="min-day5">13°</p>        
+            </div>
           </div>
         </div>
       </div>
@@ -136,10 +136,10 @@
     
   </div>
   <br />
-    <p>
-        Open-source code <a href= "https://github.com/anatick" target="blank"> by Ana Carraça </a>
-    </p>
-    
+  
+  <small >
+     <a href= "https://github.com/anatick" target="blank"> Open-source code</a> by Ana Carraça
+  </small>
   <script src="javascript.js"></script>
 </body>
 </html>
