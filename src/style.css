@@ -11,6 +11,10 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+a{
+  text-decoration: none;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 20px auto;
@@ -29,6 +33,7 @@ li:first-letter {
 .current-weather img{
   margin-left: -20px;
   margin-right: -20px;
+  margin-bottom: 5px;
   height: 120px;
   width: 120px;
 }
@@ -44,16 +49,24 @@ li:first-letter {
   font-size: 15px;
   top: -21px;
 }
+
+.current-weather .active{
+color: #212529;
+cursor: default;
+}
+
+.current-weather .active:hover {
+text-decoration: none;
+
+}
+
+
 .card-days{
-  background: #F8FCF7;
+  background: #e0e0e0;
   border: 1px solid #00203F;
   color: #00203F;
   border-radius: 8px;
   margin: -5px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 

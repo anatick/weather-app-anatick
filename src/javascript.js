@@ -41,25 +41,25 @@ function formatDate(date) {
 }
 
 function displayWeatherCondition(response) {
-  console.log(response.data);
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-    );
-  document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
+ let temperatureElement = document.querySelector("#temperature");
+ let cityElement = document.querySelector("#city");
+ let descriptionElement = document.querySelector("#description");
+ let humidityElement = document.querySelector("#humidity");
+ let windElement = document.querySelector("#wind");
+ let iconElement = document.querySelector("#icon");
+ 
+ celsiusTemperature = response.data.main.temp;
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
+ temperatureElement.innerHTML = Math.round(celsiusTemperature);
+ cityElement.innerHTML = response.data.name;
+ descriptionElement.innerHTML = response.data.weather[0].description;
+ humidityElement.innerHTML = response.data.main.humidity;
+ windElement.innerHTML = Math.round(response.data.wind.speed);
+ iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
-
-
-    iconElement.setAttribute(
-      "src",
-      'http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png'
-    );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
     }
 
@@ -98,4 +98,30 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Faro");
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = ( celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
+searchCity("Lisbon");
