@@ -61,6 +61,7 @@ text-decoration: none;
 
 .weather-forecast{
   text-align: center;
+  
 }
 
 .weather-forecast-date{
@@ -76,6 +77,14 @@ text-decoration: none;
   opacity: 0.5;
 }
 
+.card-days{
+  background: #e0e0e0;
+  border: 1px solid #00203F;
+  color: #00203F;
+  border-radius: 8px;
+  margin: -5px;
+  text-align: center;
+}
 
 #searchButton  {
   background: #195190FF;
