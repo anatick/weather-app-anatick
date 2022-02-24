@@ -21,11 +21,11 @@ a{
   padding: 20px;
   border: 1px solid #00203F;
   border-radius: 8px;
-  background: #e0e0e0;
+  background: #d6dbdbe3;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 620px;
   margin: 0px auto;
   padding: 20px;
 }
@@ -78,12 +78,12 @@ text-decoration: none;
 }
 
 .card-days{
-  background: #e0e0e0;
   border: 1px solid #00203F;
   color: #00203F;
   border-radius: 8px;
   margin: -5px;
   text-align: center;
+  opacity: 2;
 }
 
 #searchButton  {
